@@ -17,9 +17,29 @@ A specialized Technical Support Engineer and Documentation Assistant built with 
 
 ## Prerequisites & Installation
 
-Ensure you have installed the required dependencies from the workspace root:
+To manage dependencies, you can set up a virtual environment using either **uv** (recommended for speed) or the standard Python **venv** module.
 
+### Option A: Using `uv` (Recommended)
 ```bash
+# Create a virtual environment
+uv venv
+
+# Activate the virtual environment
+source .venv/bin/activate
+
+# Install the required dependencies
+uv pip install -r requirements.txt
+```
+
+### Option B: Using standard Python `venv`
+```bash
+# Create a virtual environment
+python3 -m venv env
+
+# Activate the virtual environment
+source env/bin/activate
+
+# Install the required dependencies
 pip install -r requirements.txt
 ```
 
@@ -39,17 +59,17 @@ You can interact with the agent using the ADK CLI tools included in the virtual 
 ### 1. Interactive CLI
 Run an interactive session in your terminal with the agent:
 ```bash
-./env/bin/adk run ge_agent
+adk run ge_agent
 ```
 
 ### 2. Web UI
 Start a FastAPI server with a built-in Web interface:
 ```bash
-./env/bin/adk web ge_agent
+adk web ge_agent
 ```
 
 ### 3. API Server
 Start a FastAPI backend server exposing the agent as an endpoint:
 ```bash
-./env/bin/adk api_server ge_agent
+adk api_server ge_agent
 ```
