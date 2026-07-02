@@ -11,8 +11,8 @@ A specialized Technical Support Engineer and Documentation Assistant built with 
 
 ## Repository Structure
 
-- [agent.py](file:///Users/dmoonat/Desktop/zerodhaMCP/ge_agent/agent.py) - Main agent configuration containing prompt instructions, model settings (Gemini 2.5 Pro), and the MCP toolset declaration.
-- [callback_logging.py](file:///Users/dmoonat/Desktop/zerodhaMCP/ge_agent/callback_logging.py) - Hook functions that log requests to and responses from the LLM.
+- [agent.py](agent.py) - Main agent configuration containing prompt instructions, model settings (Gemini 2.5 Pro), and the MCP toolset declaration.
+- [callback_logging.py](callback_logging.py) - Hook functions that log requests to and responses from the LLM.
 - `.env` - Environment variables configuration (API keys, Google Cloud project, region).
 
 ## Prerequisites & Installation
