@@ -2,7 +2,7 @@ from google.adk.agents import Agent
 from google.adk.tools.mcp_tool import McpToolset
 from google.adk.tools.mcp_tool.mcp_session_manager import StreamableHTTPConnectionParams
 
-from callback_logging import log_query_to_model, log_model_response
+from .callback_logging import log_query_to_model, log_model_response
 
 import os
 DEVELOPER_KNOWLEDGE_API_KEY = os.getenv('DEVELOPER_KNOWLEDGE_API_KEY', 'no_api_found')
