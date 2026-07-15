@@ -11,9 +11,14 @@ A specialized Technical Support Engineer and Documentation Assistant built with 
 
 ## Repository Structure
 
-- [agent.py](ge_agent/agent.py) - Main agent configuration containing prompt instructions, model settings (Gemini 2.5 Pro), and the MCP toolset declaration.
-- [callback_logging.py](ge_agent/callback_logging.py) - Hook functions that log requests to and responses from the LLM.
-- `.env` - Environment variables configuration (API keys, Google Cloud project, region).
+The agent is organized into a modular structure under the `ge_agent` package folder:
+- [ge_agent/agent.py](ge_agent/agent.py) - Agent instantiation using prompt, config, mcp, and tools.
+- [ge_agent/callback_logging.py](ge_agent/callback_logging.py) - Logging callback hooks.
+- [ge_agent/config.py](ge_agent/config.py) - Configuration and env variable management.
+- [ge_agent/prompt.py](ge_agent/prompt.py) - The system instruction prompt.
+- [ge_agent/mcp.py](ge_agent/mcp.py) - The documentation MCP Toolset setup.
+- [ge_agent/tools.py](ge_agent/tools.py) - The BigQuery Toolset setup.
+- `.env` - Environment variables configuration (API keys, Google Cloud project, region, model).
 
 ## Prerequisites & Installation
 
@@ -43,13 +48,14 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
-Set up your `.env` file inside the `ge_agent` directory with the following variables:
+Set up your `.env` file in the root directory with the following variables:
 
 ```ini
 GOOGLE_GENAI_USE_VERTEXAI=1
 GOOGLE_CLOUD_PROJECT=<your-project-id>
 GOOGLE_CLOUD_LOCATION=us-central1
 DEVELOPER_KNOWLEDGE_API_KEY=<your-api-key>
+MODEL=gemini-2.5-pro # Optional: default is gemini-2.5-pro
 ```
 
 ## Running the Agent
