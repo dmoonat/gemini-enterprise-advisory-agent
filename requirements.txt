@@ -1,1 +1,2 @@
-google-adk>=1.30.0
+google-adk[mcp,bigquery-analytics]>=1.30.0
+adk-finops>=1.0.0
